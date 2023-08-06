@@ -1,0 +1,247 @@
+
+.body{
+  width: 100%;
+}
+
+.love-dog{
+  height: 100px;
+  margin-left: 200px;
+}
+.navbar{
+  /* background-color: rgb(209, 145, 156); */
+  background-image: url("images/footer-bg.jpg");
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  /* position: relative; */
+  z-index: 2;
+  
+}
+
+.StartingPageLogo{
+  position: relative;
+  z-index: 1;
+}
+#myVideo {
+  position: absolute;
+  margin-right: -100px;
+  /* top: -200px; */
+  right: 0;
+  bottom: 0px;
+  left:0;
+ 
+  min-width: 100%;
+  min-height: 100%; 
+}
+
+#tagline{
+  font-family: 'Lobster', cursive;
+  font-size: 2.0rem;
+  color:rgb(0, 0, 0);
+  margin-left: 350px;
+  margin-top: -30px;
+}
+
+#tagline2{
+  font-family: 'Lobster', cursive;
+  font-size: 2.0rem;
+  color: rgb(0, 0, 0);
+  margin-left: 430px;
+  margin-top: 10px;
+}
+#logo{
+  margin-left: 200px;
+  margin-top: -40px;
+
+}
+
+.love-dog-2{
+  margin-top: 150px;
+  margin-left: 200px;
+}
+#top-links{
+  
+  padding-left: 300px;
+}
+.nav-link{
+  margin-right: 40px;
+  font-size:1.2rem;
+  font-family: "Montserrat-Light" ;
+  color: rgb(233, 244, 247);
+  line-height: 3;
+}
+
+.nav-link:hover{
+  color: #2a0bda;
+}
+
+
+.skill-row{
+  width:50%;
+  margin: 50px auto 50px auto;
+  text-align: left;
+  line-height: 2;
+  
+}
+
+/* #myVideo {
+  position: relative;
+  /* top: -200px; 
+  right: 0;
+  bottom: 0px;
+  left:0;
+ 
+  min-width: 100%;
+  min-height: 100%; 
+} */
+
+.computer-img{
+  margin-right: 70px;
+  width:18%;
+  float: left;
+  /* padding-left: 100px; */
+}
+
+.ceosText{
+  margin-left: 50px;
+}
+.stock-img{
+  margin-right: 50px;
+  margin-left: 70px;
+  width:12%;
+  float:right;
+}
+
+.card-text{
+  color: whitesmoke;
+  font-family: 'Lobster', cursive;
+}
+#starting{
+  background-color: rgb(26, 26, 70);
+  /* margin-bottom: -160px; */
+  /* background-color: aqua; */
+  /* background-image: url('images/bgg.png'); */
+  background-position: center;
+  background-size: cover;
+  /* margin-top: -70px; */
+  width: 100%;
+  height: 790px;
+
+}
+#dogshow{
+  background-color: rgb(26, 26, 70);
+  width: 100%;
+  position: relative;
+  margin-right:-100px ;
+  z-index: 1;
+  height: 100%;
+  padding-left: 2%;
+
+}
+.hovr{
+  width:19.6rem;
+  height: 20rem;
+  margin-top: -8px;
+  margin-left: -18px;
+}
+.hovr:hover{
+  width:20rem;
+  height: 22rem;
+}
+/* .cardborder{
+  border: 2px solid black;
+  
+  padding:0px; 
+} */
+.card-body{
+  text-align: center;
+}
+.card-title{
+  color: #fff;
+  font-family: cursive;
+  font-weight: bold;
+}
+.card{
+  /* height: 00px; */
+ background-color:#000000;
+  
+}
+.dog-text{
+  padding: 3% 2%;
+  font-family: 'Nabla', cursive;
+/* 
+  font-family: 'Lobster', cursive; */
+  text-align: center;
+  /* color:red; */
+
+}
+.offcanvas{
+  background-color: #000000;
+}
+
+/*footer*/
+.offcanvas{
+  background-color: rgb(1, 1, 5);
+}
+.offcanvas-header,.offcanvas-body{
+  color: aliceblue;
+}
+#ceos{
+  /* margin-top: 100px; */
+  height: 1000px;
+  width: 100%;
+  background-color: #191b20dc;
+  
+  position: relative;
+  z-index: 1;
+  /* background-color: blue; */
+}
+#foooter{
+  
+  background-image: url('images/footer-bg.jpg');
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 400px;
+}
+/* .box{
+  margin:2%; 
+   width:30%;
+  text-align: center;
+} */
+/* .adjustment{
+  margin:3%;
+} */
+.align{
+  text-align: left;
+  padding-left:120px;
+  padding-top:120px;
+
+}
+.box h2{
+  color:#fff;
+  font-weight: bold;
+  padding-bottom:20px;
+}
+.box a {
+  color:darkgray;
+  text-decoration: none;
+  /* padding-bottom:20px; */
+  line-height: 2;
+}
+
+.link:hover{
+  padding-left:20px;
+}
+.box .fas{
+  color: purple;
+
+}
+/* .box a :hover {
+  padding-left:20px;
+} */
+#ceos p,h3{
+  color:white;
+}

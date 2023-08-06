@@ -1,0 +1,62 @@
+/* body{
+   
+    /* background-color: #ff4c68;
+    height:200%; */
+    /* background-position:center; */
+    /* background-repeat: no-repeat; */
+    /* background-size:auto;    */
+
+.body{
+   background-image:url("images/d1.jpeg");
+   background-repeat: no-repeat;
+   background-size: cover ;
+}
+.error{
+   color:aqua;
+   margin-top: 20px;
+}
+#one{
+    font-size:30px;
+    font-weight: 900;
+    font-family: 'DynaPuff', cursive;    
+    color: #fff; 
+    line-height: 2;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+}
+ .login{
+    width: 65%;
+    height: 85%;
+    text-align: center;
+    border:1px solid white;
+    margin: 45px 60px 40px 10px;
+    background-color:rgb(27, 26, 26);
+    border-radius: 10px;
+    padding-left:20px;
+    padding-right: 20px;
+   
+    position: relative;
+    left: 90px;
+ }
+ .text{
+    text-align: center;
+    padding-top: 25%; 
+ }
+
+ h3{
+    padding-top:15px;
+    padding-bottom: 20px;
+    color: #fff;
+ }
+ p{
+    padding-top:30px;
+    color: #fff;
+ }
+ .btn{
+    width: 95%;
+    padding-bottom: 50px ;
+ }
+ .form-control{
+    width: 90%;
+ }
+ 
+
+ 

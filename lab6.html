@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LAB6</title>
+        <style>
+            body{
+                background-color: rgb(172, 216, 201);
+            }
+            .error{
+                color: rgb(209, 42, 42);
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                line-height: 1.5;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <br>
+        <form id="form" method="GET">
+            <div>
+                <label>Name</label>
+                <input type="text" placeholder="username" id="uname">
+                <span id="uerror" class="error"></span>
+            </div>
+            <br>
+
+            <div>
+                <label>Email</label>
+                <input type="text" placeholder="your gmail.com" id="mail_id">
+                <span id="eerror" class="error"></span>
+            </div>
+            <br>
+
+            <div>
+                <label>Password</label>
+                <input type="password" placeholder="password" id="password" >
+                <span id="perror" class="error"></span>
+            </div>
+            <br>
+
+            <div>
+                <label>Phone Number</label>
+                <input type="text" placeholder="mobile Number" id="number">
+                <span id="nerror" class="error"></span>
+            </div>
+            <br>
+
+            <div>
+                <label>Confirm Password</label>
+                <input type="password" placeholder="confirm password" id="cmppassword">
+                <span id="cperror" class="error"></span>
+            </div>
+            <br>
+
+            <div>
+                <button type="reset">reset</button>
+                <button type="submit">submit</button>
+            </div>
+        </form>
+    </body>
+    <script>
+        let form=document.getElementById('form');
+        form.addEventListener('submit',event=>{event.preventDefault();validate();});
+        //let form1=document.getElementById('form');
+        //form1.addEventListener('submit',function(){validate();})
+        function validate(){
+            username();
+            email_id();
+            phone_number();
+            password();
+            confirm_password();
+        };
+        function username(){
+            let Name=document.getElementById("uname");
+            let user_name=Name.value.trim();
+            let username_error=document.getElementById("uerror");
+            if(user_name=="")
+            {
+                username_error.innerText="User name not be empty";
+            }
+            else{
+                if(user_name.length<3){
+                    username_error.innerText="User name must be contain atleast 3 charecters";
+                }
+                if(!isNaN(user_name)){
+                    username_error.innerText="User name must contain alphabets";
+                }
+                if(user_name.match('/[0-9]/')){
+                    username_error.innerText="User name only alphabets allowed";
+                }
+            }
+        }
+
+
+        function email_id(){
+            let e=document.getElementById("mail_id");
+            let email_name=e.value.trim();
+            let email_error=document.getElementById("eerror");
+            if(email_name=="")
+            {
+                email_error.innerText="email should  not be empty";
+            }
+            else if(!email_name.match(/[a-z A-Z ]/)){
+                    email_error.innerText="Invalid email";
+            }
+        }
+
+
+        function password(){
+            let p=document.getElementById("password");
+            let user_password=p.value.trim();
+            let password_error=document.getElementById("perror");
+            if(user_password=="")
+            {
+                password_error.innerText="password sholud not be empty";
+            }
+            else if(user_password.length<8){
+                    password_error.innerText=" password must be contain atleast 8 charecters";
+            }
+            else if(!user_password.match(/[a-z]/)){
+                    password_error.innerText="password must contain atleast one lower case letter";
+            }
+            else if(!user_password.match('/[A-Z]/')){
+                    password_error.innerText="password must contain atleast one upper case letter";
+            }
+            else if(!user_password.match(/[#_@$^]/)){
+                    password_error.innerText="password must contain atleast one special symbol";
+            }
+            else if(!user_password.match(/[0-9]/)){
+                    password_error.innerText="password must contain atleast one number";
+            }
+        }
+
+        function phone_number(){
+            let p_number=document.getElementById("number");
+            let phone_number=p_number.value.trim();
+            let phonenumber_error=document.getElementById("nerror");
+            if(phone_number==""){
+                phonenumber_error.innerText="Phone number is not to be empty";
+            }
+            else if(isNaN(phone_number)){
+                    phonenumber_error.innerText="phone number is not a number type";
+            }
+            else if(phone_number.length!=10){
+                    phonenumber_error.innerText="Phone number must contain 10digits";
+            }
+            
+            else if(!phone_number.match(/[6-9][0-9]{9}/)){
+                    phonenumber_error.innerText="Invalid Phone number";
+            }
+        }
+
+        function  confirm_password(){
+            let p=document.getElementById("password");
+            let o_password=p.value.trim();
+            let c=document.getElementById("cmppassword")
+            let cnf_password=c.value.trim();
+            let cnf_error=document.getElementById("cperror");
+            if(cnf_password==""){
+                cnf_error.innerText="confirm password should not be empty";
+            }
+            else if(cnf_password!==o_password){
+                cnf_error.innerText="password dosen't matched";
+            }
+        }
+    </script>
+</html>

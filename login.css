@@ -1,0 +1,60 @@
+body{
+   background-image:url("images/d2n.jpeg");
+   background-repeat: no-repeat;
+   background-size: cover ;
+}
+
+#logo{
+	height:200px;
+	width:200px;
+	margin-top:0px;
+	margin-bottom:60px';
+}
+
+#one{
+    font-size:30px;
+    font-weight: 900;
+    font-family: 'DynaPuff', cursive;    
+    color: #fff; 
+    line-height:2;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+}
+
+ .login{
+    width: 65%;
+    height: 85%;
+    text-align: center;
+    border:1px solid white;
+    margin: 80px 60px 20px 10px;
+    background-color:rgb(27, 26, 26);
+    border-radius: 10px;
+    padding-left:20px;
+    padding-right: 20px;
+    position: relative;
+    top: 0px;
+    right: 650px;
+ }
+ 
+ #brand{
+   position: absolute;
+   top: 50px;
+   padding-left: 40px;
+ }
+ h3{
+    padding-top:15px;
+    padding-bottom: 20px;
+    color: #fff;
+ }
+ p{
+    padding-top:30px;
+    color: #fff;
+ }
+ .btn{
+    width: 95%;
+    padding-bottom: 50px ;
+ }
+ .form-control{
+    width: 90%;
+ }
+ 
+
+ 

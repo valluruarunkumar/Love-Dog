@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up</title>
+    <link rel="stylesheet" href="signup.css">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff&family=Merriweather:wght@700&family=Montserrat:wght@200;300&family=Sacramento&family=Ubuntu:wght@300;400&display=swap" rel="stylesheet">
+ 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!--font awesome-->
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
+        
+    
+</head>
+<body class="body">
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-6 col-md-6 ">
+        
+        
+   
+        </div>
+        
+        <div class="col-lg-6 col-md-6  form">
+
+            <div class="login">
+        
+                <form method="post" action="signup.php" id="form">
+                    <h3>Sign-up </h3>
+                    <div class="form-floating">
+                        <input type="text" id="uname" name="fname"  class="form-control" placeholder="Enter First Name Here">
+                        <label calss="form-labels" for="">First Name</label>
+                        <span id="uerror" class="error"></span>
+                    </div>
+                    <br>
+                    <div class="form-floating">
+                        <input type="text" id="u2name" name="lname"  class="form-control" placeholder="Enter First Name Here">
+                        <label calss="form-labels" for="">Last Name</label>
+                        <span id="u2error" class="error"></span>
+                    </div>
+                    <br>
+
+                    <div class="form-floating">
+                        <input type="text" name="email" id="mail_id" class="form-control" placeholder="Enter Email Here">
+                        <label calss="form-labels" for="">Email</label>
+                        <span id="eerror" class="error"></span>
+                    </div>
+                    <br>
+                    <div class="form-floating">
+                        <input type="password" name="password" id="pword" class="form-control " placeholder="Enter password Here">
+                        <label calss="form-labels" for="">Password</label>
+                        <span id="perror" class="error"></span>
+                    </div>
+                    <br>
+
+                    <button class="btn btn-lg btn-outline-light" type="submit">Sign-up </button>
+
+                    <p>Already have an account ? <strong><a href="/login1.html">Login</a></strong></p>
+                    
+                </form>
+                <script>
+                    let form=document.getElementById('form');
+                    form.addEventListener('submit',event=>{
+                        // event.preventDefault();
+                        validate();
+                    });
+                    //let form1=document.getElementById('form');
+                    //form1.addEventListener('submit',function(){validate();})
+                    function validate(){
+                        username();
+                        username2();
+                        email_id();
+                    
+                        password();
+                        
+                    };
+                    function username(){
+                        let Name=document.getElementById("uname");
+                        let user_name=Name.value.trim();
+                        let username_error=document.getElementById("uerror");
+                        if(user_name=="")
+                        {
+                            username_error.innerText="first name not be empty";
+                        }
+                        else{
+                            if(user_name.length<3){
+                                username_error.innerText="first name must be contain atleast 3 charecters";
+                            }
+                            if(!isNaN(user_name)){
+                                username_error.innerText="first name must contain alphabets";
+                            }
+                            if(user_name.match('/[0-9]/')){
+                                username_error.innerText="first name only alphabets allowed";
+                            }
+                        }
+                    }
+
+
+                    function username2(){
+                        let Name2=document.getElementById("u2name");
+                        let user_name2=Name2.value.trim();
+                        let username_error2=document.getElementById("u2error");
+                        if(user_name2=="")
+                        {
+                            username_error2.innerText="last name not be empty";
+                        }
+                        else{
+                            if(user_name2.length<3){
+                                username_error2.innerText="last name must be contain atleast 3 charecters";
+                            }
+                            if(!isNaN(user_name2)){
+                                username_error2.innerText="last name must contain alphabets";
+                            }
+                            if(user_name2.match('/[0-9]/')){
+                                username_error2.innerText="last name only alphabets allowed";
+                            }
+                        }
+                    }
+            
+            
+                    function email_id(){
+                        let e=document.getElementById("mail_id");
+                        let email_name=e.value.trim();
+                        let email_error=document.getElementById("eerror");
+                        if(email_name=="")
+                        {
+                            email_error.innerText="email should  not be empty";
+                        }
+                        else if(!email_name.match(/[a-z A-Z ]/)){
+                                email_error.innerText="Invalid email";
+                        }
+                    }
+            
+            
+                    function password(){
+                        let p=document.getElementById("pword");
+                        let user_password=p.value.trim();
+                        let password_error=document.getElementById("perror");
+                        if(user_password=="")
+                        {
+                            password_error.innerText="password sholud not be empty";
+                        }
+                        else if(user_password.length<8){
+                                password_error.innerText=" password must be contain atleast 8 charecters";
+                        }
+                        else if(!user_password.match(/[a-z]/)){
+                                password_error.innerText="password must contain atleast one lower case letter";
+                        }
+                        // else if(!user_password.match('/[A-Z]/')){
+                        //         password_error.innerText="password must contain atleast one upper case letter";
+                        // }
+                        else if(!user_password.match(/[#_@$^]/)){
+                                password_error.innerText="password must contain atleast one special symbol";
+                        }
+                        else if(!user_password.match(/[0-9]/)){
+                                password_error.innerText="password must contain atleast one number";
+                        }
+                    }
+            
+                   
+                    
+                    
+                </script>
+            </div>
+       
+        </div>
+        
+
+    </div>
+</body>
+</html>
